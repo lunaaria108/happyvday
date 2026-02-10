@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine's Card</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<audio id="bgm" loop>
+		<source src="music/love-ya.mp3" type="audio/mpeg">
+	</audio>
+
+	<script>
+ 		const bgm = document.getElementById('bgm');
+
+  		const startMusic = () => {
+    	bgm.play();
+    	document.removeEventListener('mousedown', startMusic);
+    	document.removeEventListener('touchstart', startMusic);
+  		};
+
+ 		document.addEventListener('mousedown', startMusic);
+ 		document.addEventListener('touchstart', startMusic);
+	</script>
+
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	    <div class="flipper">
+		    <div class="front">
+				<p>Click to play music!</p>
+			    <img src="images/kiss.gif" alt="a little smooch">
+		    </div>  
+		    <div class="back">
+			    <img src="images/happy_valentines.png" alt="happy valentines">
+				<p>I hope you know just how much I love and cherish you!</p>
+				<p>I feel like half of my time is spent thinking about the times we’ve spent together</p>
+				<p>and the other half is spent looking forward to the next time I get to see you.</p>
+				<p> I truly can’t imagine my life without you,</p>
+				<p>and I can’t wait to see what our future together holds and what adventures we’ll go on!</p>
+
+				<section>
+					<p>Always yours,</p>
+					<p>Luna &#128149</p>
+				</section>
+		    </div>
+	    </div>
+    </div>
+</body>
+</html>
+

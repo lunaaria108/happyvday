@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #ffdde1, #ecadb6, #ffdde1);
+
+	cursor: url('https://cdn.cursors-4u.net/css-previews/flyff-chinese-arrow-through-double-hearts-786d94ad-css.webp') 0 0, auto !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pixelify-sans {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* flip animation/card*/
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 800px;
+	height: 600px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+
+	justify-content: center;
+	align-items: center;
+}
+
+.front img {
+	height: 800px;
+}
+
+.front p {
+	font-family: "Pixelify Sans";
+	align-self: start;
+}
+
+/* back, initially hidden pane */
+.back {
+	display: grid;
+	grid-template-columns: 1fr;
+	transform: rotateY(180deg);
+	gap:5px;
+
+	place-items: center;
+
+	font-family: "Pixelify Sans";
+}
+
+.back img {
+	height: 200px;
+}
+
+.back p {
+	width: fit-content;
+	margin: 0;
+}
+
+.back section {
+	justify-self: end;
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
