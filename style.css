@@ -3,6 +3,9 @@ body {
     min-height: 100vh;
 
     background-image: url("images/Background.png");
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
 	cursor: url('https://cdn.cursors-4u.net/css-previews/flyff-chinese-arrow-through-double-hearts-786d94ad-css.webp') 0 0, auto !important;
 
@@ -100,6 +103,7 @@ body {
 	margin: 0;
 
 }
+
 
 
 
