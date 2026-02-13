@@ -22,6 +22,7 @@ body {
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
+	background-color: linear-gradient(135deg, #ffdde1, #ecadb6, #ffdde1);
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -97,4 +98,5 @@ body {
 	padding: 0;
 	border: 0;
 	margin: 0;
+
 }
