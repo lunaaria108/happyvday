@@ -2,6 +2,8 @@ body {
     margin: 0;
     min-height: 100vh;
 
+	background: linear-gradient(135deg, #ffdde1, #ecadb6, #ffdde1);
+
 	cursor: url('https://cdn.cursors-4u.net/css-previews/flyff-chinese-arrow-through-double-hearts-786d94ad-css.webp') 0 0, auto !important;
 
     display: flex;
@@ -20,7 +22,6 @@ body {
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
-	background: linear-gradient(135deg, #ffdde1, #ecadb6, #ffdde1);
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -98,6 +99,7 @@ body {
 	margin: 0;
 
 }
+
 
 
 
